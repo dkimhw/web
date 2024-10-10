@@ -1,0 +1,14 @@
+{
+  "devDependencies": {
+    "concurrently": "^9.0.1",
+    "typescript": "^5.6.2"
+  },
+  "dependencies": {
+    "json-server": "^0.17.4"
+  },
+  "scripts": {
+    "start:parcel": "npx parcel index.html",
+    "start:db": "npx json-server --watch db.json",
+    "start": "concurrently npm:start:*"
+  }
+}
