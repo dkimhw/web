@@ -1,17 +1,12 @@
-import { User } from "./models/User";
+import { User } from './models/User'
 
-
-const user = new User({ name: 'asdf', age: 20 });
-user.on('click', () => {
-  console.log('clicked');
+const user = User.buildUser({
+  name: 'hello',
+  age: 12,
 });
 
-user.on('click', () => {
-  console.log('another clicked');
+user.on('save', () => {
+  console.log(user)
 });
 
-user.on('change', () => {
-  console.log('changed');
-});
-
-user.trigger('click');
+user.save();
